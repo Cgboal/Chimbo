@@ -83,6 +83,7 @@ STATICFILES_DIRS = (
 )
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR) + '/static/'
+MEDIA_URL = '/static/media/'
 MEDIA_ROOT = STATIC_URL + '/media/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/templates/',

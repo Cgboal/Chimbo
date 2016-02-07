@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d56d4b49-baa2-4052-9477-e229da9488ef" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chApp/templates/index.html" afterPath="$PROJECT_DIR$/chApp/templates/index.html" />
     </list>
     <ignored path="Chimbo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -561,7 +560,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454857063079</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed bg image attempt 1&#10;">
+      <created>1454858753533</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1454858753533</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -598,7 +603,8 @@
     <MESSAGE value="Fixed HTML, working on getting static files working" />
     <MESSAGE value="stuff" />
     <MESSAGE value="Think static files work now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Think static files work now" />
+    <MESSAGE value="fixed bg image attempt 1&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bg image attempt 1&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

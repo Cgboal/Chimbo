@@ -18,7 +18,7 @@
             h = checkTime(h);
             m = checkTime(m);
             s = checkTime(s);
-            document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
             t = setTimeout(function() {
                 startTime()
             }, 500);
@@ -37,14 +37,13 @@
 
 <body bgcolor="#FFFFFF" ondragstart="return false" onselectstart="return false" onload="startTime()">
 
-
     <article>
         <h1>Chimbo</h1>
 
 
         <h2 align="center">
-		<div id="txt"></div>
-			</h2>
+		<div id="clock"></div>
+        </h2>
         <nav id="main_nav">
             <ul>
                 <li>
@@ -112,10 +111,6 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">Library</a>
-
-                </li>
-                <li>
                     <a href="">About us</a>
                     <ul>
                         <li>
@@ -134,7 +129,10 @@
                         </li>
                     </ul>
                 </li>
+                  <li>
+                    <a href="">Library</a>
 
+                </li>
                 <li>
                     <a href="FAQ.html">F.A.Q</a>
 

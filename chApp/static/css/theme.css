@@ -18,7 +18,7 @@ body {
 article {
 	width: 1200px;
 	margin: 0 auto;
-	background: #787878 ;
+	background: #FFFFFF ;
 	color: #000;
 	border-radius: 25px;
 	box-shadow: 0 0 15px 2px #000;
@@ -29,9 +29,6 @@ section {
 	height: 1000px;
 
 
-}
-clock{
-	padding-left: 500px;
 }
 
 h1 {
@@ -115,10 +112,11 @@ a {
 	opacity: 1;
 }
 
-txt {
-	padding-left: 50px;
-		text-align: center;
-	  position: relative;
+#clock {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    position: relative;
 
 }
 main_content{

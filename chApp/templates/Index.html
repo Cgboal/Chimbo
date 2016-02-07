@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<script language=JavaScript> var message="Function Disabled!"; function clickIE4(){ if (event.button==2){ alert(message); return false; } } function clickNS4(e){ if (document.layers||document.getElementById&&!document.all){ if (e.which==2||e.which==3){ alert(message); return false; } } } if (document.layers){ document.captureEvents(Event.MOUSEDOWN); document.onmousedown=clickNS4; } else if (document.all&&!document.getElementById){ document.onmousedown=clickIE4; } document.oncontextmenu=new Function("alert(message);return false") </script>
+
+
+	<title>The Database..</title>
+	
+	<link rel="stylesheet" type="text/css" href="theme.css">
+	<script>
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+h=checkTime(h);
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout(function(){startTime()},500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+</head>
+
+
+
+<body>
+			<body background="1.jpg">
+	<article>
+		<body bgcolor="#FFFFFF" ondragstart="return false" onselectstart="return false">
+
+		<h1>Chimbo</h1>
+	
+<body onload="startTime()">	
+
+
+<h2 align="center">
+		<div id="txt"></div>
+			</h2>
+<nav id="main_nav">
+			<ul>
+				<li>
+					<a href="">Dashboard</a>
+					<ul>
+						<li>
+							<a href="profile.html">Profile</a>
+							<ul>
+								<li><a href="groupcreate.html">View Profile</a></li>
+								<li><a href="groupmanage.html">Manage Profile</a></li>		
+						</ul>
+						</li>
+						<li><a href="groups.html">Groups</a>
+						<ul>
+								<li><a href="groupcreate.html">Create Groups</a></li>
+								<li><a href="groupmanage.html">Manage Groups</a></li>
+								<li><a href="groupactive.html">View Active Groups</a></li>
+						
+						</ul>
+						</li>
+						
+						<li><a href="mcourses.html">Manage Courses</a>
+						<ul>
+								<li><a href="groupcreate.html">Subscribe to Courses</a></li>
+								<li><a href="groupmanage.html">Manage Subscribtions</a></li>
+								<li><a href="groupactive.html">View Active Subscriptions</a></li>
+						
+						</ul>
+						</li>
+						<li><a href="settings.html">Settings</a></li>
+						<li><a href="support.html">Support</a></li>
+					
+					</ul>
+				</li>
+				<li>
+					<a href="">News</a>
+					<ul>
+						<li><a href="">Example</a></li>
+						<li><a href="">Example</a></li>
+						<li><a href="">Example</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Courses</a>
+					<ul>
+						<li><a href="">Law</a></li>
+						<li><a href="">Mathematics</a></li>
+						<li><a href="">Computing</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Library</a>
+					
+				</li>
+				<li>
+					<a href="">About us</a>
+					<ul>
+						<li>
+							<a href="whatwedo.html">What we do?</a>
+							
+						</li>
+						<li>
+							<a href="aims.html">Our Aims</a>
+							
+						</li>
+						<li>
+							<a href="wheremoney.html">Where the money goes?</a>
+						</li>
+						<li>
+							<a href="involved.html">Get Involved!</a>
+						</li>
+					</ul>
+				</li>
+				
+				<li>
+					<a href="FAQ.html">F.A.Q</a>
+					
+				</li>
+			</ul>
+		</nav>
+
+<section id="main_content">
+	<br>
+	<br>
+	<br>
+	<h2 align="center">Hello #username!, Welcome to your Dashboard, this is where you can manage and view your content. </h2>
+			<p></p>
+		</section>
+
+		
+
+	</article>
+
+	
+</body>
+		<h2 align="center">
+
+  &copy; 2014 SpaceBears Inc.
+	</h2>
+			
+	</centre>
+</html>
+
+
+
+	
+
+
+
+

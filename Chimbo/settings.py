@@ -82,5 +82,5 @@ USE_TZ = True
 STATIC_URL = 'Chimbo/chApp/static/'
 
 TEMPLATE_DIRS = (
-	'Chimbo/chApp/templates/',
+	'chApp/templates/',
 )

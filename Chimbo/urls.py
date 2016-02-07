@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin//', include(admin.site.urls)),
-    url(r'^index.html$', 'chApp.views.index'),
+    url(r'^$', 'chApp.views.index'),
     	
 )   
 urlpatterns += staticfiles_urlpatterns()

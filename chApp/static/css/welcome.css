@@ -1,0 +1,43 @@
+#welcome {
+    font-family: "brandon-grotesque",sans-serif;
+    color: #FFFFFF;
+}
+
+#splashImg {
+    min-height: 100%;
+    min-width: 1024px;
+    opacity: 0.5;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+#title {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2.5em;
+
+
+}
+
+#buttons {
+    padding-top: 1em;
+    width: 100%
+}
+
+.aButton {
+    margin: auto;
+    text-align: center;
+    display: block;
+    margin-top: 1.4em;
+    padding: 0.6em;
+    border: 1px solid #FFFFFF;
+    width: 15em;
+}
+
+
+

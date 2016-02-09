@@ -52,11 +52,9 @@ a {
 }
 
 #main_nav ul {
-	background: black;
-	-webkit-transition: .5s;
-	transition: .5s;
-
-
+    background: black;
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
 #main_nav li {
@@ -96,7 +94,7 @@ a {
 }
 
 #main_nav li:hover, #main_nav li:hover li {
-	background: #fff
+	background-color: #f0f2f3;
 }
 
 #main_nav li li:hover, #main_nav li li:hover li {
@@ -110,6 +108,7 @@ a {
 #main_nav li:hover > ul {
 	visibility: visible;
 	opacity: 1;
+    background-color: #003366;
 }
 
 #clock {

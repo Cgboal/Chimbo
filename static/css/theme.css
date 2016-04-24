@@ -7,7 +7,7 @@
 
 body {
 	font: 300 15px/1.5 "Helvetica Neue", helvetica, arial, sans-serif;
-	background: #000000;
+	background-image: url("../media/1.jpg");
 	margin: 25px;
 	border-radius: 2000px;
 	border: 500px;
@@ -18,7 +18,7 @@ body {
 article {
 	width: 1200px;
 	margin: 0 auto;
-	background: #787878 ;
+	background: #FFFFFF ;
 	color: #000;
 	border-radius: 25px;
 	box-shadow: 0 0 15px 2px #000;
@@ -29,9 +29,6 @@ section {
 	height: 1000px;
 
 
-}
-clock{
-	padding-left: 500px;
 }
 
 h1 {
@@ -55,11 +52,9 @@ a {
 }
 
 #main_nav ul {
-	background: black;
-	-webkit-transition: .5s;
-	transition: .5s;
-
-
+    background: black;
+    -webkit-transition: .5s;
+    transition: .5s;
 }
 
 #main_nav li {
@@ -99,7 +94,7 @@ a {
 }
 
 #main_nav li:hover, #main_nav li:hover li {
-	background: #fff
+	background-color: #f0f2f3;
 }
 
 #main_nav li li:hover, #main_nav li li:hover li {
@@ -113,12 +108,14 @@ a {
 #main_nav li:hover > ul {
 	visibility: visible;
 	opacity: 1;
+    background-color: #003366;
 }
 
-txt {
-	padding-left: 50px;
-		text-align: center;
-	  position: relative;
+#clock {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    position: relative;
 
 }
 main_content{

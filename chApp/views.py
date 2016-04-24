@@ -17,3 +17,7 @@ def login(request):
 
 def navTest(request):
     return render_to_response('navtest.html', context_instance=RequestContext(request))
+
+
+def signUp(request):
+    return render_to_response('signup.html', context_instance=RequestContext(request))

@@ -9,12 +9,14 @@ urlpatterns = patterns('',
     # url(r'^$', 'Chimbo.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+
     url(r'^admin/', include(admin.site.urls)),
                        url(r'^$', 'chApp.views.welcome'),
                        url(r'^login/$', 'chApp.views.login'),
                        url(r'^navtest/$', 'chApp.views.navTest'),
-
+                       url(r'^signup/$', 'chApp.views.signup'),
                        )
+
 urlpatterns += patterns('', (
         r'^static/(?P<path>.*)$',
         'django.views.static.serve',

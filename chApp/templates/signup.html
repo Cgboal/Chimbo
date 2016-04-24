@@ -3,21 +3,46 @@
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
     <Title>Welcome</Title>
+
 </head>
 <body id="welcome">
 <img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
 <h1 id="title">Welcome to Chimbo Online</h1>
-<div id="buttons">
-    <a class="aButton">
-        Learn More
-    </a>
-    <a class="aButton">
-        Log In
-    </a>
-    <a class="aButton">
-        Sign up
-    </a>
-    <p>hello my namre is moo</p>
-</div>
+
+<h2 id = "registerheader">Please Register Below</h2>
+<table id="registertable">
+<form action="/Details/" method="post">
+    <br>
+    <p>
+    <label for="Details">First Name: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+
+    <p>
+    <label for="Details">Last Name: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+
+    <p>
+    <label for="Details">Country: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+
+    <p>
+    <label for="Details">Email Address: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+
+    <p>
+    <label for="Details">Password: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+    <p>
+    <label for="Details">Retype Password: </label>
+    <input id="Details" type="text" name="your_name" value="" maxlength="100">
+    </p>
+</form>
+</table>
+
 </body>
 </html>

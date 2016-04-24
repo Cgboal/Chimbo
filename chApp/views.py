@@ -24,7 +24,9 @@ def navTest(request):
 def signUp(request):
     req = ['username', 'fName', 'lName', 'country', 'email', 'pass', 'rePass']
     for i in req:
-        if i not in request.POST and request.POST[i] != None:
+        if i not in request.POST:
+            return render(request, 'signup.html')
+        elif request.POST[i] != None:
             return render(request, 'signup.html')
     h = hashlib.md5(request.POST['pass']).hexdigest()
     u = User(userName=request.POST['username'], pHash=h, perms=0, fName=request.POST['fName'],

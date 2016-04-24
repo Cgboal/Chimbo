@@ -11,3 +11,8 @@ class Test(models.Model):
 
 
 class User(models.Model):
+    Fname = models.CharField(max_length=200)
+    Lname = models.CharField(max_length=200)
+    Country = models.CharField(max_length=200)
+    Email = models.CharField(max_length=200)
+    Password = models.CharField(max_length=32)

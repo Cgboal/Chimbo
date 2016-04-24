@@ -8,3 +8,6 @@ class Test(models.Model):
 
     def __str__(self):
         return self.test_field
+
+
+class User(models.Model):

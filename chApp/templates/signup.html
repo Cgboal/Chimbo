@@ -7,14 +7,14 @@
 
 </head>
 <body id="welcome">
-<img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
+<img id="splashImg" src="{{ MEDIA_URL }}1.jpg">
 <h1 id="title">Welcome to Chimbo Online</h1>
 
 <h2 id = "registerheader">Please Register Below</h2>
 
 <form action="/signup/" method="post">
     {% csrf_token %}
-    {% for row in form %}
+    {% for row in regForm %}
         <div id="Details"></div>
         {{ row.label_tag }} {{ row }}
     {% endfor %}

@@ -14,10 +14,7 @@
 
 <form action="/signup/" method="post">
     {% csrf_token %}
-    {% for row in regForm %}
-        <div id="Details"></div>
-        {{ row.label_tag }} {{ row.field }}
-    {% endfor %}
+    {{ regForm.as_table }}
 </form>
 
 

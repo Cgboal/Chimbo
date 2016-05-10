@@ -16,7 +16,7 @@
     {% csrf_token %}
     {% for row in regForm %}
         <div id="Details"></div>
-        {{ row.label_tag }} {{ row }}
+        {{ row.label_tag }} {{ row.field }}
     {% endfor %}
 </form>
 

@@ -37,4 +37,4 @@ def signUp(request):
         return render(request, 'login.html')
     else:
         context = {'regForm' : regForm}
-        return render(request, 'index.html', context)
+        return render(request, 'signup.html', context)

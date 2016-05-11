@@ -24,7 +24,7 @@ def navTest(request):
 
 def signUp(request):
     if request.method == 'POST':
-        req = ['username', 'fName', 'lName', 'country', 'email', 'pass', 'rePass']
+        req = ['userName', 'fName', 'lName', 'country', 'email', 'password', 'rePass']
         for i in req:
             if i not in request.POST:
                 return render(request, 'signup.html')

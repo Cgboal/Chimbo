@@ -20,7 +20,7 @@ class regForm(forms.Form):
         if cd['password'] == cd['rePass']:
             pHash = hashlib.md5(cd['password']).hexdigest()
             u = User(userName=cd['userName'], pHash=pHash, fName=cd['fName'], lName=cd['lName'], country=cd['country'],
-                     email=cd['email'])
+                     email=cd['email'], perms=0)
             u.save()
         else:
             return False

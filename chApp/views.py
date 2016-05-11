@@ -25,11 +25,6 @@ def navTest(request):
 def signUp(request):
     if request.method == 'POST':
         req = ['userName', 'fName', 'lName', 'country', 'email', 'password', 'rePass']
-        for i in req:
-            if i not in request.POST:
-                return render(request, 'index.html')
-            elif request.POST[i] != None:
-                return render(request, 'welcome.html')
         form = regForm(request.POST)
         if form.process():
             return render(request, 'login.html')

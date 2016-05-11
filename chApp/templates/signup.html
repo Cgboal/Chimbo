@@ -15,11 +15,11 @@
 <form action="/signup/" method="post">
     {% csrf_token %}
     {% for field in regForm %}
-        <div id='fieldWrapper'>
+        <div class='fieldWrapper'>
         {{ field.label_tag }} {{ field }}
         </div>
     {% endfor %}
-    <input type="submit", value="Submit">
+    <input type="submit" value="Submit">
 </form>
 
 

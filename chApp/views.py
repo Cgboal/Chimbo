@@ -30,11 +30,9 @@ def signUp(request):
                 return render(request, 'signup.html')
             elif request.POST[i] != None:
                 return render(request, 'signup.html')
-        h = hashlib.md5(request.POST['pass']).hexdigest()
-        u = User(userName=request.POST['username'], pHash=h, perms=0, fName=request.POST['fName'],
-                 lName=request.POST['lName'], country=request.POST['country'], email=request.POST['email'])
-        u.save()
-        return render(request, 'login.html')
+        form = regForm(request.POST)
+        if form.process():
+            return render(request, 'login.html')
     else:
         context = {'regForm' : regForm}
         return render(request, 'signup.html', context)

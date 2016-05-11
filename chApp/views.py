@@ -26,7 +26,8 @@ def signUp(request):
     if request.method == 'POST':
         req = ['userName', 'fName', 'lName', 'country', 'email', 'password', 'rePass']
         form = regForm(request.POST)
-        if form.process():
+        if form.is_valid():
+            form.process()
             return render(request, 'login.html')
     else:
         context = {'regForm' : regForm}

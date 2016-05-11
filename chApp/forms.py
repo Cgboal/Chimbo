@@ -23,4 +23,4 @@ class regForm(forms.Form):
                      email=cd['email'], perms=0)
             u.save()
         else:
-            return False
+            return None

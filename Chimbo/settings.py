@@ -90,4 +90,5 @@ MEDIA_URL = '/static/media/'
 MEDIA_ROOT = STATIC_URL + '/media/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/templates/',
+    os.path.join(BASE_DIR) + '/login/templates',
 )

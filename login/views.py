@@ -27,5 +27,5 @@ def loginView(request):
                     login(request, user)
                     return redirect('/navtest/')
     context = {'loginForm' : loginForm}
-    return render(request, 'login.html', context)
+    return render(request, 'index.html', context)
 

@@ -18,7 +18,7 @@ def signUp(request):
 
 def loginView(request):
     if request.method == 'POST':
-        form = loginForm(request)
+        form = loginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
             user = authenticate(username=cd['userName'], password=cd['password'])

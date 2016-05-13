@@ -14,7 +14,7 @@ urlpatterns = patterns('',
                        url(r'^$', 'chApp.views.welcome'),
                        url(r'^login/$', 'chApp.views.login'),
                        url(r'^navtest/$', 'chApp.views.navTest'),
-                       url(r'^signup/$', 'chApp.views.signUp'),
+                       url(r'^signup/$', 'login.views.signUp'),
                        )
 
 urlpatterns += patterns('', (

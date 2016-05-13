@@ -5,6 +5,9 @@ from .forms import regForm, loginForm
 
 # Create your views here.
 
+def welcome(request):
+    return render(request, 'welcome.html')
+
 
 def signUp(request):
     if request.method == 'POST':

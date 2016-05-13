@@ -11,7 +11,7 @@ urlpatterns = patterns('',
 
 
     url(r'^admin/', include(admin.site.urls)),
-                       url(r'^$', 'chApp.views.welcome'),
+                       url(r'^$', 'login.views.welcome'),
                        url(r'^login/$', 'login.views.loginView'),
                        url(r'^navtest/$', 'chApp.views.navTest'),
                        url(r'^signup/$', 'login.views.signUp'),

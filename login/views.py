@@ -28,7 +28,7 @@ def loginView(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('/navtest/')
+                    return redirect('/')
     context = {'loginForm' : loginForm}
-    return render(request, 'index.html', context)
+    return render(request, 'login.html', context)
 

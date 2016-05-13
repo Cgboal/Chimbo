@@ -8,12 +8,14 @@
 
     <body>
         <h1>Login</h1>
+        <form action="/login/" method="post">
         {% for field in loginForm %}
             <div class="fieldWrapper">
-            {{ field.label_tag }} {{ field }}
+            {{ field }}
             </div>
         {% endfor %}
         <input type="submit" value="Login">
+        </form>
     </body>
     <form>
 

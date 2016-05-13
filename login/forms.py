@@ -7,12 +7,12 @@ from django_countries.fields import LazyTypedChoiceField
 
 
 class regForm(forms.Form):
-    userName = forms.CharField(label='Username', max_length=30)
-    fName = forms.CharField(label='First Name', max_length=20)
-    lName = forms.CharField(label='Last Name', max_length=20)
-    email = forms.EmailField(label='Email', max_length=100)
-    password = forms.CharField(label='Password', widget=forms.PasswordInput())
-    rePass = forms.CharField(label='Re-type password', widget=forms.PasswordInput())
+    userName = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder' : 'username'}))
+    fName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'first name'}))
+    lName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'last name'}))
+    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={'placeholder' : 'email'}))
+    password = forms.CharField( widget=forms.PasswordInput(attrs={'placeholder' : 'password'}))
+    rePass = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder' : 'retype password'}))
 
 
     def process(self):

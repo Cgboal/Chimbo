@@ -16,7 +16,7 @@
     {% csrf_token %}
     {% for field in regForm %}
         <div class='fieldWrapper'>
-        {{ field.label_tag }} {{ field }}
+        {{ field }}
         </div>
     {% endfor %}
     <input type="submit" value="Register">

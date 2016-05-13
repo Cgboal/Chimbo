@@ -24,11 +24,11 @@ def loginView(request):
         form = loginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            user = authenticate(username=cd['userName'], password=cd['password'])
+            user = authenticate(username=cd['userName'].lower(), password=cd['password'])
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('/')
+                    return redirect('/dashboard/')
     context = {'loginForm' : loginForm}
     return render(request, 'login.html', context)
 

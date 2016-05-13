@@ -18,7 +18,7 @@ class regForm(forms.Form):
     def process(self):
         cd = self.cleaned_data
         if cd['password'] == cd['rePass']:
-            user = User.objects.create_user(cd['userName'], cd['email'], cd['password'], first_name=cd['fName'], last_name=cd['lName'])
+            user = User.objects.create_user(cd['userName'].lower(), cd['email'], cd['password'], first_name=cd['fName'], last_name=cd['lName'])
             user.save()
             return True
 

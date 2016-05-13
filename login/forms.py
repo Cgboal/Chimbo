@@ -25,5 +25,5 @@ class regForm(forms.Form):
 
 class loginForm(forms.Form):
     userName = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'class' : 'formInput', 'placeholder' : 'username'}))
-    password = forms.CharField(widget=forms.TextInput(attrs={'class' : 'formInput', 'placeholder' : 'password'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class' : 'formInput', 'placeholder' : 'password'}))
 

@@ -1,14 +1,15 @@
 <html>
-    {% load staticfiles %}
     <head>
+        {% load staticfiles %}
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
     </head>
 
     <body>
+        <img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
         <h1>Login</h1>
         <form action="/login/" method="post">
+        {% csrf_token %}
         {% for field in loginForm %}
             <div class="fieldWrapper">
             {{ field }}

@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from .forms import regForm
+from django.contrib.auth import authenticate, login
+from .forms import regForm, loginForm
+
 
 # Create your views here.
 
@@ -12,3 +14,18 @@ def signUp(request):
                 return redirect('/login/')
     context = {'regForm' : regForm}
     return render(request, 'signup.html', context)
+
+
+def loginView(request):
+    if request.method == 'POST':
+        form = loginForm(request)
+        if form.is_valid():
+            cd = form.cleaned_data
+            user = authenticate(username=cd['userName'], password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('/navtest/')
+    context = {'loginForm' : loginForm}
+    return render(request, 'login.html', context)
+

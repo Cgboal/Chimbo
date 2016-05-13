@@ -9,11 +9,11 @@ def index(request):
 
 
 def welcome(request):
-    return render(request, 'welcome.html')
+    return render(request, '../login/templates/welcome.html')
 
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, '../login/templates/login.html')
 
 
 def navTest(request):

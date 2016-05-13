@@ -1,0 +1,21 @@
+<html>
+    {% load staticfiles %}
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}">
+    </head>
+
+    <body>
+        <h1>Login</h1>
+        {% for field in loginForm %}
+            <div class="fieldWrapper">
+            {{ field.label_tag }} {{ field }}
+            </div>
+        {% endfor %}
+        <input type="submit" value="Login">
+    </body>
+    <form>
+
+    </form>
+</html>

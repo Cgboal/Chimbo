@@ -18,5 +18,4 @@ class regForm(forms.Form):
         if cd['password'] == cd['rePass']:
             user = User.objects.create_user(cd['userName'], cd['email'], cd['password'], first_name=cd['fName'], last_name=cd['lName'])
             user.save()
-        else:
-            return None
+            return True

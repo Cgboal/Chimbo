@@ -10,7 +10,5 @@ def signUp(request):
         if form.is_valid():
             if form.process():
                 return redirect('/login/')
-
-
     context = {'regForm' : regForm}
     return render(request, 'signup.html', context)

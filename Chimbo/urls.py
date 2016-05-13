@@ -15,6 +15,7 @@ urlpatterns = patterns('',
                        url(r'^login/$', 'login.views.loginView'),
                        url(r'^navtest/$', 'chApp.views.navTest'),
                        url(r'^signup/$', 'login.views.signUp'),
+                       url(r'^dashboard/$', 'chApp.views.index')
                        )
 
 urlpatterns += patterns('', (

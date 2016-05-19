@@ -29,12 +29,9 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-<<<<<<< HEAD
-django.contrib.auth.LOGIN_URL
-=======
+
 LOGIN_URL = '/'
 
->>>>>>> 57d7ce1854d7c2a146bc9d1f9494d3baaeb9b49e
 
 # Application definition
 

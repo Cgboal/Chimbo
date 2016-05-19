@@ -89,7 +89,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/static/',
-    rel('/login/static'),
+    rel('/login/static/'),
 )
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR) + '/static/'
@@ -97,5 +97,5 @@ MEDIA_URL = '/static/media/'
 MEDIA_ROOT = STATIC_URL + '/media/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/templates/',
-    os.path.join(BASE_DIR) + '/login/templates',
+    os.path.join(BASE_DIR) + '/login/templates/',
 )

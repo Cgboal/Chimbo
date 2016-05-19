@@ -11,10 +11,11 @@ urlpatterns = patterns('',
 
 
     url(r'^admin/', include(admin.site.urls)),
-                       url(r'^$', 'chApp.views.welcome'),
-                       url(r'^login/$', 'chApp.views.login'),
+                       url(r'^$', 'login.views.welcome'),
+                       url(r'^login/$', 'login.views.loginView'),
                        url(r'^navtest/$', 'chApp.views.navTest'),
-                       url(r'^signup/$', 'chApp.views.signUp'),
+                       url(r'^signup/$', 'login.views.signUp'),
+                       url(r'^dashboard/$', 'chApp.views.index')
                        )
 
 urlpatterns += patterns('', (

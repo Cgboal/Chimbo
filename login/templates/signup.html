@@ -4,7 +4,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
     <Title>Welcome</Title>
-
 </head>
 <body id="welcome">
 <img id="splashImg" src="{{ MEDIA_URL }}1.jpg">
@@ -16,10 +15,10 @@
     {% csrf_token %}
     {% for field in regForm %}
         <div class='fieldWrapper'>
-        {{ field.label_tag }} {{ field }}
+        {{ field }}
         </div>
     {% endfor %}
-    <input type="submit" value="Submit">
+    <input type="submit" value="Register">
 </form>
 
 

@@ -13,6 +13,8 @@ import os
 import django.contrib.auth
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+def rel(path):
+    return os.path.join(BASE_DIR) + path
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -27,7 +29,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
 django.contrib.auth.LOGIN_URL
+=======
+LOGIN_URL = '/'
+
+>>>>>>> 57d7ce1854d7c2a146bc9d1f9494d3baaeb9b49e
 
 # Application definition
 
@@ -85,6 +92,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/static/',
+    rel('/login/static'),
 )
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR) + '/static/'
@@ -92,4 +100,5 @@ MEDIA_URL = '/static/media/'
 MEDIA_ROOT = STATIC_URL + '/media/'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR) + '/chApp/templates/',
+    os.path.join(BASE_DIR) + '/login/templates',
 )

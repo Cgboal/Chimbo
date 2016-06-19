@@ -7,6 +7,10 @@
     border: 1px solid #FFFFFF;
     width: 15em;
 }
+.fieldWrapper input[type=text] {
+    border: none;
+    border-bottom: solid 2px #c9c9c9;
+}
 
 
 a:visited {

@@ -1,4 +1,4 @@
-#fieldWrapper {
+.fieldWrapper {
     margin: auto;
     text-align: center;
     display: block;
@@ -6,4 +6,9 @@
     padding: 0.6em;
     border: 1px solid #FFFFFF;
     width: 15em;
+}
+
+
+a:visited {
+    color:white;
 }

@@ -39,5 +39,7 @@ body {
     width: 15em;
 }
 
-
+a:visited {
+    color:white;
+}
 

@@ -21,10 +21,11 @@
     text-align: center;
 }
 
-#regButton {
+#regButton input {
     background-color: #FFFFFF;
-    color: rgba(1,1,1,0);
+    color: #666666;
     display: inline-block;
+    text-align: center;
 
 
 }

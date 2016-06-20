@@ -4,7 +4,6 @@
     display: block;
     margin-top: 1.4em;
     padding: 0.6em;
-    border: 1px solid #FFFFFF;
     width: 15em;
 }
 .fieldWrapper input {
@@ -14,12 +13,20 @@
 }
 
 .fieldWrapper input:hover {
-    border-bottom: solid 2px #666666;
+    border-bottom: solid 2px #00000c;
 }
 
 #registerHeader {
     padding-top: 1em;
     text-align: center;
+}
+
+#regButton {
+    background-color: #FFFFFF;
+    color: rgba(1,1,1,0);
+    display: inline-block;
+
+
 }
 
 a:visited {

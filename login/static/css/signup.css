@@ -14,9 +14,13 @@
 }
 
 .fieldWrapper input:hover {
-    border-bottom: solid 2px #969696;
+    border-bottom: solid 2px #666666;
 }
 
+#registerHeader {
+    padding-top: 1em;
+    text-align: center;
+}
 
 a:visited {
     color:white;

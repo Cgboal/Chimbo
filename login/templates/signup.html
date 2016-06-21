@@ -19,13 +19,15 @@
     {% csrf_token %}
     {% for field in regForm %}
         <div class="row">
-        <div class='medium-6 columns'>
+        <div class='medium-6 medium-centered columns'>
             {{ field }}
         </div>
         </div>
     {% endfor %}
     <div class="row">
+        <div class="small-4 small centered columns">
         <input class="button" type="submit" value="Register">
+        </div>
     </div>
 </form>
 

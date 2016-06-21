@@ -5,13 +5,13 @@
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation Starter Template</title>
+    <title>Login</title>
     <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
 </head>
 <body>
 <img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
-<h1>Login</h1>
+<h1 id="title">Login</h1>
 <form action="/login/" method="post">
     {% csrf_token %}
     {% for field in loginForm %}

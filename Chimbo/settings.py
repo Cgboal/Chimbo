@@ -73,7 +73,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'Chimbo.db'),
     }
 }
-TEMPLATE_DIRS = [
+templates = [
     os.path.join(BASE_DIR) + '/chApp/templates/',
     os.path.join(BASE_DIR) + '/login/templates/',
     os.path.join(BASE_DIR) + '/notes/templates/',
@@ -82,7 +82,7 @@ TEMPLATE_DIRS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': TEMPLATE_DIRS,
+        'TEMPLATE_DIRS': templates,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -5,28 +5,31 @@
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Foundation Starter Template</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
+    <title>Register</title>
     <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
 </head>
 <body>
 <img id="splashImg" src="{{ MEDIA_URL }}1.jpg">
 <h1 id="title">Welcome to Chimbo Online</h1>
-
-<p id="registerHeader">Please Register Below</p>
+<div class="row">
+    <div class="medium-4 columns">
+        <p id="registerHeader">Please Register Below</p>
+    </div>
+</div>
 
 <form action="/signup/" method="post">
     {% csrf_token %}
     {% for field in regForm %}
         <div class="row">
-        <div class='medium-6 medium-centered columns'>
-            {{ field }}
-        </div>
+            <div class='medium-4 medium-centered columns'>
+                {{ field }}
+            </div>
         </div>
     {% endfor %}
     <div class="row">
-        <div class="small-4 small centered columns">
-        <input class="button" type="submit" value="Register">
+        <div class="small-4 small-centered columns">
+            <input class="button" type="submit" value="Register">
         </div>
     </div>
 </form>

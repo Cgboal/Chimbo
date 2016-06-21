@@ -15,9 +15,10 @@ urlpatterns = [
     url(r'^signup/$', login_views.signUp),
     url(r'^dashboard/$', notes_views.dashboard)
 ]
-
+"""
 urlpatterns += [('', (
     r'^static/(?P<path>.*)$',
     'django.views.static.serve',
     {'document_root': 'static'}
 ))]
+"""

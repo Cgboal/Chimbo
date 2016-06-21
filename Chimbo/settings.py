@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'django_countries',
     'chApp',
     'login',
+    'notes',
 )
 
 MIDDLEWARE_CLASSES = (

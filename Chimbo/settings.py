@@ -82,7 +82,7 @@ templates = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'TEMPLATE_DIRS': templates,
+        'DIRS': templates,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

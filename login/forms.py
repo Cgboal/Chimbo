@@ -7,12 +7,12 @@ from django_countries.fields import LazyTypedChoiceField
 
 
 class regForm(forms.Form):
-    userName = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder' : 'username'}))
-    fName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'first name'}))
-    lName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'last name'}))
-    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={'placeholder' : 'email'}))
-    password = forms.CharField( widget=forms.PasswordInput(attrs={'placeholder' : 'password'}))
-    rePass = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder' : 'retype password'}))
+    userName = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder' : 'Username'}))
+    fName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'First Name'}))
+    lName = forms.CharField(max_length=20, widget=forms.TextInput(attrs={'placeholder' : 'Last Name'}))
+    email = forms.EmailField(max_length=100, widget=forms.EmailInput(attrs={'placeholder' : 'Email'}))
+    password = forms.CharField( widget=forms.PasswordInput(attrs={'placeholder' : 'Password'}))
+    rePass = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder' : 'Retype Password'}))
 
 
     def process(self):

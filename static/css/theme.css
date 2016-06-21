@@ -7,7 +7,7 @@
 
 body {
 	font: 300 15px/1.5 "Helvetica Neue", helvetica, arial, sans-serif;
-	background-image: url("../media/1.jpg");
+	background-image: url("../../../login/static/media/1.jpg");
 	margin: 25px;
 	border-radius: 2000px;
 	border: 500px;

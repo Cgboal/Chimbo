@@ -7,23 +7,21 @@ from notes import views as notes_views
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
-                       # Examples:
-    # url(r'^$', 'Chimbo.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+urlpatterns = ['',
+               # Examples:
+               # url(r'^$', 'Chimbo.views.home', name='home'),
+               # url(r'^blog/', include('blog.urls')),
 
 
-    url(r'^admin/', include(admin.site.urls)),
-                       url(r'^$', login_views.welcome),
-                       url(r'^login/$', login_views.loginView),
-                       url(r'^signup/$', login_views.signUp),
-                       url(r'^dashboard/$', notes_views.dashboard)
-                       )
+               url(r'^admin/', include(admin.site.urls)),
+               url(r'^$', login_views.welcome),
+               url(r'^login/$', login_views.loginView),
+               url(r'^signup/$', login_views.signUp),
+               url(r'^dashboard/$', notes_views.dashboard)
+               ]
 
-urlpatterns += patterns('', (
-        r'^static/(?P<path>.*)$',
-        'django.views.static.serve',
-        {'document_root': 'static'}
-))
-
-
+urlpatterns += [('', (
+    r'^static/(?P<path>.*)$',
+    'django.views.static.serve',
+    {'document_root': 'static'}
+))]

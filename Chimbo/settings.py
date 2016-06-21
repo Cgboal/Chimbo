@@ -73,7 +73,27 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'Chimbo.db'),
     }
 }
+TEMPLATE_DIRS = [
+    os.path.join(BASE_DIR) + '/chApp/templates/',
+    os.path.join(BASE_DIR) + '/login/templates/',
+    os.path.join(BASE_DIR) + '/notes/templates/',
+]
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': TEMPLATE_DIRS,
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -98,8 +118,4 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR) + '/static/'
 MEDIA_URL = '/static/media/'
 MEDIA_ROOT = STATIC_URL + '/media/'
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR) + '/chApp/templates/',
-    os.path.join(BASE_DIR) + '/login/templates/',
-    os.path.join(BASE_DIR) + '/notes/templates/',
-)
+

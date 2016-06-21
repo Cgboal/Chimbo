@@ -9,11 +9,29 @@
     <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
 </head>
 <body>
-<ul class="menu">
-    <li><p>Chimbo</p></li>
-    <li><a href="#">My Courses</a></li>
-    <li><a href="#">Courses</a></li>
-</ul>
+div class="top-bar">
+  <div class="top-bar-left">
+    <ul class="dropdown menu" data-dropdown-menu>
+      <li class="menu-text">Chimbo</li>
+      <li>
+        <a href="#">Courses</a>
+        <ul class="menu vertical">
+          <li><a href="#">Law</a></li>
+          <li><a href="#">Mathematics</a></li>
+          <li><a href="#">Computer Science</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Groups</a></li>
+      <li><a href="#">News</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <li><input type="search" placeholder="Search"></li>
+      <li><button type="button" class="button">Search</button></li>
+    </ul>
+  </div>
+</div>
 
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/what-input.min.js"></script>

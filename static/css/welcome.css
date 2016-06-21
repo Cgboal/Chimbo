@@ -39,6 +39,11 @@ body {
     width: 15em;
 }
 
+a {
+    color:white;
+    text-decoration: none;
+}
+
 a:visited {
     color:white;
 }

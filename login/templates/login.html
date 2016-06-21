@@ -1,25 +1,39 @@
-<html>
-    <head>
-        {% load staticfiles %}
-        <title>Login</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}">
-    </head>
-
-    <body>
-        <img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
-        <h1>Login</h1>
-        <form action="/login/" method="post">
-        {% csrf_token %}
-        {% for field in loginForm %}
-            <div class="fieldWrapper">
-            {{ field }}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Foundation Starter Template</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/welcome.css' %}">
+</head>
+<body>
+<img id="splashImg" src="{{ MEDIA_URL }}/1.jpg">
+<h1>Login</h1>
+<form action="/login/" method="post">
+    {% csrf_token %}
+    {% for field in loginForm %}
+        <div class="row">
+            <div class="medium-4 medium-centered columns">
+                {{ field }}
             </div>
-        {% endfor %}
-        <input type="submit" value="Login">
-        </form>
-    </body>
-    <form>
+        </div>
+    {% endfor %}
+    <div class="row">
+        <div class="small-4 small-centered columns">
+            <input type="submit" value="Login">
+        </div>
+    </div>
+</form>
 
-    </form>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/what-input.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+    $(document).foundation();
+</script>
+
+</body>
 </html>

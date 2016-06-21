@@ -11,13 +11,7 @@
 </head>
 <body>
 <img id="splashImg" src="{{ MEDIA_URL }}1.jpg">
-<h1 id="title">Welcome to Chimbo Online</h1>
-<div class="row">
-    <div class="medium-4 columns">
-        <p id="registerHeader">Please Register Below</p>
-    </div>
-</div>
-
+<h1 id="title">Register</h1>
 <form action="/signup/" method="post">
     {% csrf_token %}
     {% for field in regForm %}

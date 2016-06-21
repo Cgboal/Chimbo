@@ -18,12 +18,14 @@
 <form action="/signup/" method="post">
     {% csrf_token %}
     {% for field in regForm %}
-        <div class='fieldWrapper'>
+        <div class="row">
+        <div class='medium-6 columns'>
             {{ field }}
         </div>
+        </div>
     {% endfor %}
-    <div id="regButton" style="text-align:center;">
-        <input type="submit" value="Register">
+    <div class="row">
+        <input class="button" type="submit" value="Register">
     </div>
 </form>
 

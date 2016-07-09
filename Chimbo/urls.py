@@ -14,7 +14,8 @@ urlpatterns = [
     url(r'^login/$', login_views.loginView),
     url(r'^signup/$', login_views.signUp),
     url(r'^dashboard/$', notes_views.dashboard),
-    url(r'^courses/$', notes_views.courses)
+    url(r'^courses/$', notes_views.courseList),
+    url(r'^modules/$', notes_views.courseView)
 ]
 """
 urlpatterns += [('', (

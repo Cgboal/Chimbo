@@ -5,7 +5,7 @@
     <ul class="no-bullet">
     {% for course in Courses %}
         <li>
-        <a href="">{{ course.name }}</a>
+        <a href="/modules/?c={{ course.name }}">{{ course.name }}</a>
         </li>
     {% endfor %}
     </ul>

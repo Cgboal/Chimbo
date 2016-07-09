@@ -8,6 +8,18 @@ def dashboard(request):
     return render(request, 'base.html')
 
 @login_required()
-def courses(request):
+def courseList(request):
     c = models.Course.objects.all()
     return render(request, 'courses.html', context={"Courses" : c})
+
+@login_required()
+def courseView(request):
+    if request.method != 'GET':
+        courseList(request)
+    c = request.GET.get('c', '')
+    if not c:
+        courseList(request)
+    modules = models.Module.objects.filter(course=c)
+    if not modules:
+        courseList(request)
+    return render(request, 'modules.html', context={"Modules" : modules})

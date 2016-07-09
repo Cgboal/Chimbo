@@ -10,32 +10,36 @@
 </head>
 <body>
 <div class="top-bar">
-<div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Chimbo</li>
-        <li>
-            <a href="#">Courses</a>
-            <ul class="menu vertical">
-                <li><a href="#">Law</a></li>
-                <li><a href="#">Mathematics</a></li>
-                <li><a href="#">Computer Science</a></li>
-            </ul>
-        </li>
-        <li><a href="#">Groups</a></li>
-        <li><a href="#">News</a></li>
-    </ul>
+    <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text">Chimbo</li>
+            <li>
+                <a href="#">Courses</a>
+                <ul class="menu vertical">
+                    <li><a href="#">Law</a></li>
+                    <li><a href="#">Mathematics</a></li>
+                    <li><a href="#">Computer Science</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><input type="search" placeholder="Search"></li>
+            <li>
+                <button type="button" class="button">Search</button>
+            </li>
+        </ul>
+    </div>
 </div>
-<div class="top-bar-right">
-    <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
-        <li>
-            <button type="button" class="button">Search</button>
-        </li>
-    </ul>
+<div class="row">
+    <div class="large-9 columns">
+        {% block content %}
+        {% endblock %}
+    </div>
 </div>
-</div>
-{% block content %}
-{% endblock %}
 
 
 <script src="js/vendor/jquery.min.js"></script>

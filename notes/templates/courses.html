@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h1>Courses:</h1>
     {% for course in Courses %}
-        <p>{{ course.name }}</p>
+        <a href="">{{ course.name }}</a>
     {% endfor %}
 {% endblock %}

@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Courses:</h1>
+    <h2>Courses:</h2>
+    <ul class="no-bullet">
     {% for course in Courses %}
+        <li>
         <a href="">{{ course.name }}</a>
+        </li>
     {% endfor %}
+    </ul>
 {% endblock %}

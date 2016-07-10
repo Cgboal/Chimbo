@@ -13,15 +13,15 @@
             <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content
                  aria-labelledby="panel1d-heading">
                 <ul class="no-bullet">
+                {% with y=forloop.counter0|add:"1" %}
                     {% for module in Modules %}
-
-                        {% if module.year == forloop.counter0|add:"1" %}
+                        {% if module.year == y %}
                             <li>
                                 {{ module.title }}
                             </li>
                         {% endif %}
-
                     {% endfor %}
+                {% endwith %}
                 </ul>
             </div>
         </li>

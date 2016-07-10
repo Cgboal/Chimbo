@@ -14,13 +14,13 @@
                         </a>
                         <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
                              aria-labelledby="panel{{ y }}d-heading">
-                            <ul class="no-bullet">
+                            <ol>
                                 {% for note in Notes %}
                                     {% if note.module == module %}
                                         <li><a href="/notes/?id={{ note.id }}">{{ note.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}
-                            </ul>
+                            </ol>
                         </div>
                     {% endif %}
                 {% endfor %}

@@ -15,6 +15,7 @@
                         <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
                              aria-labelledby="panel{{ y }}d-heading">
                             <ul class="no-bullet">
+                            <li>{{ module.id }}</li>
                                 {% for note in Notes %}
                                     {% if note.module == module.id %}
                                         <li>{{ note.title }}</li>

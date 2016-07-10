@@ -15,7 +15,8 @@ urlpatterns = [
     url(r'^signup/$', login_views.signUp),
     url(r'^dashboard/$', notes_views.dashboard),
     url(r'^courses/$', notes_views.courseList),
-    url(r'^modules/$', notes_views.courseView)
+    url(r'^modules/$', notes_views.courseView),
+    url(r'^notes/$', notes_views.noteView)
 ]
 """
 urlpatterns += [('', (

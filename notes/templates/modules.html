@@ -3,28 +3,29 @@
 {% block content %}
 
     {% for x in Years %}
-        <ul class="accordion" data-accordion role="tablist">
-        <li class="accordion-item is-active">
+        {% with y=forloop.counter0|add:"1" %}
+            <ul class="accordion" data-accordion role="tablist">
+            <li class="accordion-item is-active">
             <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
-            <a href="#panel1d" role="tab" class="accordion-title" id="panel1d-heading"
-               aria-controls="panel1d">Year {{ forloop.counter0|add:"1" }}
+            <a href="#panel{{ y }}d" role="tab" class="accordion-title" id="panel{{ y }}d-heading"
+               aria-controls="panel{{ y }}d">Year {{ y }}
             </a>
             <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
-            <div id="panel1d" class="accordion-content" role="tabpanel" data-tab-content
-                 aria-labelledby="panel1d-heading">
-                <ul class="no-bullet">
-                {% with y=forloop.counter0|add:"1" %}
-                    {% for module in Modules %}
-                        {% if module.year == y %}
-                            <li>
-                                {{ module.title }}
-                            </li>
-                        {% endif %}
-                    {% endfor %}
-                {% endwith %}
-                </ul>
-            </div>
-        </li>
+            <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
+                 aria-labelledby="panel{{ y }}d-heading">
+            <ul class="no-bullet">
+
+            {% for module in Modules %}
+                {% if module.year == y %}
+                    <li>
+                        {{ module.title }}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    </ul>
+    </div>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}

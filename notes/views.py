@@ -20,7 +20,7 @@ def courseView(request):
     if not c:
         courseList(request)
     modules = models.Module.objects.filter(course=c)
-    years = models.Course.objects.filter(name=c)
+    years = models.Course.objects.get(name=c)
     if not modules:
         courseList(request)
     return render(request, 'modules.html', context={"Modules" : modules, "Years" : range(years.years)})

@@ -40,8 +40,6 @@ def noteView(request):
     c = request.GET.get('id', '')
     if not c:
         return courseList(request)
-    try:
-        note = models.Note.objects.get(id=id)
-        return render(request, 'notes.html', context={"Note" : note})
-    except Exception, e:
-        return courseList(request)
+
+    note = models.Note.objects.get(id=id)
+    return render(request, 'notes.html', context={"Note": note})

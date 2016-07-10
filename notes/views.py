@@ -37,9 +37,11 @@ def courseView(request):
 def noteView(request):
     if request.method != "GET":
         return courseList()
-    c = request.GET.get('id', '')
-    if not c:
+    pKey = request.GET.get('id', '')
+    if not pKey:
         return courseList(request)
-
-    note = models.Note.objects.get(id=id)
-    return render(request, 'notes.html', context={"Note": note})
+    try:
+        note = models.Note.objects.get(id=pKey)
+        return render(request, 'notes.html', context={"Note" : note})
+    except Exception, e:
+        return courseList(request)

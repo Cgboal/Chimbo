@@ -5,7 +5,7 @@ from django.db import models
 # Create your models here.
 
 class Course(models.Model):
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=80, primary_key=True)
     years = models.IntegerField()
 
     def __str__(self):

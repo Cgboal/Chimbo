@@ -1,27 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <ul class="accordion" data-accordion role="tablist">
-        {% for x in Years %}
-            {% with y=forloop.counter0|add:"1" %}
-                <li class="accordion-item">
-                <a href="#panel{{ y }}d" role="tab" class="accordion-title" id="panel{{ y }}d-heading"
-                   aria-controls="panel{{ y }}d">Year {{ y }}
-                </a>
-                <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
-                     aria-labelledby="panel{{ y }}d-heading">
-                <ul class="no-bullet">
+    {% for x in Years %}
+        {% with y=forloop.counter0|add:"1" %}
+            <h3>Year {{ y }}</h3>
+            <hr></hr>
+            <ul class="accordion" data-accordion role="tablist">
                 {% for module in Modules %}
                     {% if module.year == y %}
-                        <li>{{ module.title }}</li>
+                        <li class="accordion-item">
+                        <a href="#panel{{ y }}d" role="tab" class="accordion-title" id="panel{{ y }}d-heading"
+                           aria-controls="panel{{ y }}d">Year {{ y }}
+                        </a>
+                        <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
+                             aria-labelledby="panel{{ y }}d-heading">
+                            <ul class="no-bullet">
+                                {% for note in Notes %}
+                                    {% if note.module == module.id %}
+                                        <li>{{ note.title }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
                     {% endif %}
                 {% endfor %}
-            {% endwith %}
-        </ul>
-        </div>
-        </li>
-        {% endfor %}
-    </ul>
+
+            </ul>
+
+        {% endwith %}
+    {% endfor %}
 {% endblock %}
+
+
 
 

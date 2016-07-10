@@ -15,12 +15,14 @@ def courseList(request):
 @login_required()
 def courseView(request):
     if request.method != 'GET':
-        courseList(request)
+         return courseList(request)
     c = request.GET.get('c', '')
     if not c:
         courseList(request)
-    modules = models.Module.objects.filter(course=c)
-    years = models.Course.objects.get(name=c)
-    if not modules:
-        courseList(request)
-    return render(request, 'modules.html', context={"Modules" : modules, "Years" : range(years.years)})
+    try:
+        modules = models.Module.objects.filter(course=c)
+        years = models.Course.objects.get(name=c)
+        notes = models.Note.objects.filter(module__in=modules)
+        return render(request, 'modules.html', context={"Modules" : modules, "Years" : range(years.years), "Notes" : notes})
+    except Exception, e:
+        return courseList()

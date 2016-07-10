@@ -14,11 +14,13 @@
                  aria-labelledby="panel1d-heading">
                 <ul class="no-bullet">
                     {% for module in Modules %}
-                        <li>
-                            {% if module.year == forloop.counter0|add:"1" %}
+
+                        {% if module.year == forloop.counter0|add:"1" %}
+                            <li>
                                 {{ module.title }}
-                            {% endif %}
-                        </li>
+                            </li>
+                        {% endif %}
+
                     {% endfor %}
                 </ul>
             </div>

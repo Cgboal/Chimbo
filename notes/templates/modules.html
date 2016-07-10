@@ -4,22 +4,16 @@
     <ul class="accordion" data-accordion role="tablist">
         {% for x in Years %}
             {% with y=forloop.counter0|add:"1" %}
-
                 <li class="accordion-item">
-                <!-- The tab title needs role="tab", an href, a unique ID, and aria-controls. -->
                 <a href="#panel{{ y }}d" role="tab" class="accordion-title" id="panel{{ y }}d-heading"
                    aria-controls="panel{{ y }}d">Year {{ y }}
                 </a>
-                <!-- The content pane needs an ID that matches the above href, role="tabpanel", data-tab-content, and aria-labelledby. -->
                 <div id="panel{{ y }}d" class="accordion-content" role="tabpanel" data-tab-content
                      aria-labelledby="panel{{ y }}d-heading">
                 <ul class="no-bullet">
-
                 {% for module in Modules %}
                     {% if module.year == y %}
-                        <li>
-                            {{ module.title }}
-                        </li>
+                        <li>{{ module.title }}</li>
                     {% endif %}
                 {% endfor %}
             {% endwith %}
@@ -28,7 +22,6 @@
         </li>
         {% endfor %}
     </ul>
-    <script src="js/foundation/foundation.accordion.js"></script>
 {% endblock %}
 
 

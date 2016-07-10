@@ -16,7 +16,7 @@
                              aria-labelledby="panel{{ y }}d-heading">
                             <ul class="no-bullet">
                                 {% for note in Notes %}
-                                    {% if note.module == module.title %}
+                                    {% if note.module == module %}
                                         <li>{{ note.title }}</li>
                                     {% endif %}
                                 {% endfor %}

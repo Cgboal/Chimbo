@@ -44,5 +44,5 @@ def noteView(request):
 
     note = models.Note.objects.get(id=pKey)
     module = models.Module.objects.get(title=mKey)
-    chapters = models.Note.get(module__in=module)
+    chapters = models.Note.objects.get(module__in=module)
     return render(request, 'notes.html', context={"Note" : note, "Module" : module, "Chapters" : chapters})

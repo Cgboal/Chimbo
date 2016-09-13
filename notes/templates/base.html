@@ -35,14 +35,14 @@
     </div>
 </div>
 <div class="row">
+    {% block nav %}
+    {% endblock %}
     <div class="large-9 columns" style="padding-top: 1em">
         <div class="callout">
             {% block content %}
             {% endblock %}
         </div>
     </div>
-     {% block nav %}
-            {% endblock %}
 </div>
 
 

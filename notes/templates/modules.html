@@ -17,7 +17,7 @@
                             <ol>
                                 {% for note in Notes %}
                                     {% if note.module == module %}
-                                        <li><a href="/notes/?id={{ note.id }}&c={{ module.id }}">{{ note.title }}</a></li>
+                                        <li><a href="/notes/?id={{ note.id }}&c={{ module.title }}">{{ note.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}
                             </ol>

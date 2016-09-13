@@ -11,7 +11,7 @@
     <li>{{ Module.title }}</li>
     <ul class="side-nav">
         {% for x in Chapters %}
-            <li><a href="/?id={{ Note.id }}&c={{ Module.title }}">{{ x.title }}</a></li>
+            <li><a href="/notes/?id={{ Note.id }}&c={{ Module.title }}">{{ x.title }}</a></li>
         {% endfor %}
 
     </ul>

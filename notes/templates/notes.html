@@ -7,8 +7,9 @@
 
 {% block nav %}
   <div class="large-3 columns">
-    <ul class="side-nav">
-    <li>{{ Module.title }}</li>
+    <p>{{ Module.title }}</p>
+    <ul class="menu vertical">
+
     <li><hr></hr></li>
         {% for x in Chapters %}
             <li><a href="/notes/?id={{x.id }}&c={{ Module.title }}">{{ x.title }}</a></li>

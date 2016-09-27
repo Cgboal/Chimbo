@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/foundation.css' %}"/>
 </head>
 <body>
+<div class="row">
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="dropdown menu" data-dropdown-menu>
@@ -34,8 +35,9 @@
         </ul>
     </div>
 </div>
+</div>
 <div style="padding-top: 1em;">
-<div class="row" style="padding-left: 10em">
+<div class="row">
     {% block nav %}
     {% endblock %}
     <div class="large-7 columns">

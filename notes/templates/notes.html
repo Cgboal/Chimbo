@@ -9,7 +9,7 @@
   <div class="large-3 columns">
     <ul class="side-nav">
     <li>{{ Module.title }}</li>
-    <li class="divider"></li>
+    <li><hr></hr></li>
         {% for x in Chapters %}
             <li><a href="/notes/?id={{x.id }}&c={{ Module.title }}">{{ x.title }}</a></li>
         {% endfor %}

@@ -430,7 +430,7 @@ button {
 
 .row {
   max-width: 75rem;
-  margin-left: auto;
+  margin-left: 2em;
   margin-right: auto; }
   .row::before, .row::after {
     content: ' ';

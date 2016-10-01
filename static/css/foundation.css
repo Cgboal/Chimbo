@@ -2050,13 +2050,8 @@ select {
     padding-bottom: 3rem;
     padding-left: 3rem; }
 
-  .content > :first-child {
-    margin-top: 0;
+  .content {
     padding: 0.5em;
-  }
-  .content > :last-child {
-    margin-bottom: 0;
-
   }
 
 .close-button {

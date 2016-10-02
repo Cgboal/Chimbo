@@ -3401,6 +3401,7 @@ table.hover tr:nth-of-type(even):hover {
             transform: translateY(-50%); }
 
 .top-bar {
+  position: fixed;
   padding: 0.5rem; }
   .top-bar::before, .top-bar::after {
     content: ' ';
